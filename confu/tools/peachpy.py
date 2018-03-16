@@ -32,6 +32,7 @@ class PeachPy(Tool):
     		"x86_64-macos":       ("sysv", "mach-o"),
     		"x86_64-nacl-newlib": ("nacl", "elf"),
     		"x86_64-nacl-gnu":    ("nacl", "elf"),
+    		"x86_64-freebsd":     ("sysv", "elf"),
     	}[self.target]
     	ninja.rule("peachpy",
     		"$peachpy -mabi={abi} -g4 -mimage-format={imageformat} $includes -MMD -MF $out.d -o $out $in"
