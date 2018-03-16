@@ -179,6 +179,10 @@ class Platform:
         return self.os == "macos"
 
     @property
+    def is_freebsd(self):
+        return self.os == "freebsd"
+
+    @property
     def is_windows(self):
         return self.os == "windows"
 
