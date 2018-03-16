@@ -228,6 +228,12 @@ def detect_host():
     elif sys.platform == "win32":
         if machine in x86_64_machines:
             return "x86_64-windows"
+    elif sys.platform.startswith("freebsd"):
+        if machine in x86_64_machines:
+            return "x86_64-freebsd"
+        elif machine in x86_machines:
+            return "x86-freebsd"
+
     else:
         logging.critical("failed to detect the host platform: "
                          "sys.platform = {sys.platform}".format(sys=sys))

@@ -176,6 +176,8 @@ platform_alternatives = {
     "pnacl-nacl-newlib": ["pnacl", "pnacl-nacl", "pnacl-newlib"],
     "asmjs-emscripten": ["asmjs"],
     "wasm32-emscripten": ["wasm-emscripten", "wasm"],
+    "x86_64-freebsd": [],
+    "x86-freebsd": [],
 }
 platform_mappings = {name: name for name in platform_alternatives}
 for name, alternatives in six.iteritems(platform_alternatives):
